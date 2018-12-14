@@ -6,6 +6,7 @@ module.exports = function(config) {
       files: [
         { pattern: 'ext-6.2.0-gpl/build/ext-modern-all.js', watched: false },
         'test/TestsStarter.js',
+        'test/KarmaStart.js',
         { pattern: 'script/MyApp/**/*.js', watched: true, served: true, included: false },
 
         'test/**/*.Test.js'
