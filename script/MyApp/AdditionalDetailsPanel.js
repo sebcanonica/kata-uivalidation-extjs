@@ -1,7 +1,7 @@
 Ext.define('MyApp.AdditionalDetailsPanel', {
     extend: 'Ext.Panel',
     defaultListenerScope: true,
-    referenceHolder: true,            
+    referenceHolder: true,
 
     fullscreen: true,
     items: [
@@ -10,7 +10,7 @@ Ext.define('MyApp.AdditionalDetailsPanel', {
             layout: 'hbox',
             items: [
                 {
-                    xtype: 'container',
+                    xtype: 'fieldset',
                     defaults: {
                         xtype: 'radiofield',
                         name: 'type',
@@ -19,7 +19,7 @@ Ext.define('MyApp.AdditionalDetailsPanel', {
                         }
                     },
                     minWidth: '100px',
-                    layout: 'vbox',                                
+                    layout: 'vbox',
                     items: [
                         {
                             label: 'Text',
@@ -27,10 +27,10 @@ Ext.define('MyApp.AdditionalDetailsPanel', {
                             checked: true
                         }, {
                             label: 'Url',
-                            reference: 'url'           
+                            reference: 'url'
                         }, {
                             label: 'Html',
-                            reference: 'html'            
+                            reference: 'html'
                         }
                     ]
                 }, {
@@ -47,7 +47,7 @@ Ext.define('MyApp.AdditionalDetailsPanel', {
                     }
                 }
             ]
-        }               
+        }
     ],
 
     _errorMessage: '',
@@ -66,7 +66,7 @@ Ext.define('MyApp.AdditionalDetailsPanel', {
     },
 
     _handleRadio: function() {
-        this.lookupReference('textArea').setValue('');        
+        this.lookupReference('textArea').setValue('');
     },
 
     _handleSumbit: function() {
@@ -93,13 +93,13 @@ Ext.define('MyApp.AdditionalDetailsPanel', {
 
     _validateUrl: function() {
         var body = this.lookupReference('textArea').getValue();
-        try {        
+        try {
             new URL(body);
         } catch (exception) {
             this._errorMessage = exception.message;
             return false;
         }
-        return false;
+        return true;
     },
 
     _validateText: function() {
@@ -112,5 +112,5 @@ Ext.define('MyApp.AdditionalDetailsPanel', {
 
         return true;
     }
-    
+
 });
