@@ -54,7 +54,7 @@ Ext.define('MyApp.AdditionalDetailsPanel', {
 
     _actionPerformed: function(field) {
         if (field.getReference() == "submit") {
-            if (this._handleSumbit()) {
+            if (this._handleSubmit()) {
                 alert('Additional Information Stored');
                 location.href = 'about:blank';
             } else {
@@ -69,7 +69,7 @@ Ext.define('MyApp.AdditionalDetailsPanel', {
         this.lookupReference('textArea').setValue('');
     },
 
-    _handleSumbit: function() {
+    _handleSubmit: function() {
         if (this.lookupReference('text').isChecked())
             return this._validateText();
         if (this.lookupReference('url').isChecked())
