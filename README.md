@@ -27,7 +27,7 @@ Ensure node and npm are installed.
 
 Run ```npm install``` to retrieve dependencies.
 
-To run the application interactively, run ```npm start```. This will launch an http server ready to serve the app. Just open the url in a browser. Hit ```Ctrl-C``` to stop the server.
+To run the application interactively, run ```npm start```. This will launch an http server ready to serve the app. Just open the url in a browser, appending ```/index.html``` to it. Hit ```Ctrl-C``` to stop the server.
 
 To run tests, 2 options are provided. Both uses Chrome to be providea real DOM and be Ext-JS friendly. Tests are loaded from the Test folder and files should end with a ```.Test.js``` extension. They can be written using Jasmine and SinonJS.
 To start their execution:
