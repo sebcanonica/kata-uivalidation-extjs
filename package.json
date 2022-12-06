@@ -11,7 +11,7 @@
   "author": "",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "http-server": "^0.11.1"
+    "http-server": "^0.11.2"
   },
   "devDependencies": {
     "jasmine": "^3.3.1",
